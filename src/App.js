@@ -1,9 +1,14 @@
+import Categories from './components/Categories';
+import Header from './components/Header';
 import './scss/app.scss'
 
 function App() {
   return (
     <div className="wrapper">
-     <h1>Мое спортивное приложение</h1>
+      <div className='container'>
+     <Header />
+     <Categories />
+     </div>
     </div>
   );
 }

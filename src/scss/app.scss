@@ -7,9 +7,33 @@
     box-sizing: border-box;
   }
 body {
-    display: flex;
     justify-content: center;
     min-height: 100vh;
     background: #23242a;
     color: #45f3ff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+li {
+  background: #28292d; 
+  margin: 5px;  
+  ul {
+    display: none;
+  }
+  ul.active {
+    display: block;
+  }
+}
+.wrapper {
+  display: block;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
