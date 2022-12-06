@@ -2,37 +2,29 @@ import React from 'react';
 import Exercises from './Exercises';
 
 const Categories = () => {
-    const [activeIndex, setActiveIndex]=React.useState(0);
+    const [activeIndex, setActiveIndex] = React.useState(0);
     const categories = [
-        'Все',
-        'Мясные',
-        'Вегетарианская',
-        'Гриль',
-        'Острые',
-        'Закрытые'
+        'Руки',
+        'Спина',
+        'Ноги',
+        'Плечи',
+        'Корпус'
     ]
-    const onClickCategory =(index)=> {
-        // функция клика по категориям
-        setActiveIndex(index);
-        console.log(index);
-    }
     return (
         <div>
             <ul>
-                <li className='cat'>Грудь
-                    <Exercises />
-                </li>
-                <li onClick={()=>onClickCategory()} className='cat'>Руки</li>
-                <li onClick={()=>onClickCategory()} className='cat'>Спина</li>
-                <li onClick={()=>onClickCategory()} className='cat'>Ноги</li>
-                <li onClick={()=>onClickCategory()} className='cat'>Плечи</li>
-                <li onClick={()=>onClickCategory()} className='cat'>Корпус</li>
+                {categories.map((item, i) => (
+                    <li onClick={() => setActiveIndex(i)} className={activeIndex === i ? 'active' : ''}>{item}
+                        <ul><Exercises /></ul>
+                    </li>
+                ))}
             </ul>
-
-
 
         </div>
     );
 }
 
 export default Categories;
+
+
+

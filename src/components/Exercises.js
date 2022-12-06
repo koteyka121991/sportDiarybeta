@@ -1,12 +1,12 @@
 import React from 'react';
+import exercises from '../assets/exercises.json'
 
-const Exercises = () => {
+const Exercises = () => {  
     return (
-        <>
-            <ul>
-                <li>Жим лежа</li>
-                <li>Брусья</li>
-            </ul>
+        <>  
+        {exercises.map((obj) => (
+           <li>{obj.title}</li>  
+           ))}  
         </>
     );
 }
