@@ -5,7 +5,7 @@ const Exercises = () => {
     return (
         <>  
         {exercises.map((obj) => (
-           <li>{obj.title}</li>  
+           <li key={obj.id}>{obj.title}</li>  
            ))}  
         </>
     );
