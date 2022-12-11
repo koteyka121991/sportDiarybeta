@@ -1,30 +1,29 @@
-import React from 'react';
-import Exercises from './Exercises';
+import React from "react";
+import Exercises from "./Exercises";
 
 const Categories = () => {
-    const [activeIndex, setActiveIndex] = React.useState(0);
-    const categories = [
-        'Руки',
-        'Спина',
-        'Ноги',
-        'Плечи',
-        'Корпус'
-    ]
-    return (
-        <div>
-            <ul>
-                {categories.map((item, i) => (
-                    <li key={item}  onClick={() => setActiveIndex(i)} className={activeIndex === i ? 'active' : ''}>{item}
-                        <ul><Exercises /></ul>
-                    </li>
-                ))}
-            </ul>
+  const [cat, setCat] = React.useState();
+  const [openPopup, setOpenPopup] = React.useState(false);
 
-        </div>
-    );
-}
+  const categories = ["Руки", "Спина", "Ноги", "Плечи", "Корпус"];
+  let children = null;
+
+  return (
+    <>
+      {categories.map((obj, i) => (
+        <li key={obj.id} onClick={() => setCat(i)}>
+          {obj}
+         
+            <ul className={cat === i ? 'active' : ''}>
+              <li >                
+                <Exercises />
+              </li>
+            </ul>
+        
+        </li>
+      ))}
+    </>
+  );
+};
 
 export default Categories;
-
-
-

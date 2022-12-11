@@ -21,13 +21,14 @@ body {
 
 li {
   background: #28292d; 
-  margin: 5px;  
+  margin: 5px; 
   ul {
     display: none;
-  }
+  } 
   ul.active {
     display: block;
   }
+
 }
 .wrapper {
   display: block;
