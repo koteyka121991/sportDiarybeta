@@ -19,7 +19,7 @@ export default function Diary() {
   return (
     <>
       <div>
-    
+        
         {buttonOpen && (
           <div>
             <h1>Тренировка не найдена</h1>

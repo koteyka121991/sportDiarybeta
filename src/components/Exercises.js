@@ -1,5 +1,5 @@
-import React from "react";
-
+import React from 'react';
+import exercises from '../assets/exercises.json'
 
 const Exercises = ({ item}) => {
     const [subExercises, setSubExercises] = React.useState(false);
