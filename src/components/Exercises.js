@@ -1,14 +1,25 @@
-import React from 'react';
-import exercises from '../assets/exercises.json'
+import React from "react";
 
-const Exercises = () => {  
-    return (
-        <>  
-        {exercises.map((obj) => (
-           <li key={obj.id}>{obj.title}</li>  
-           ))}  
-        </>
-    );
-}
+
+const Exercises = ({ item}) => {
+    const [subExercises, setSubExercises] = React.useState(false);
+    const showExercises = () => setSubExercises(!subExercises);
+  return (
+    <>
+      <div onClick={showExercises}>{item.name}</div>
+      <div>{subExercises &&
+       item.exercises.map((item, index)=>{
+        return (
+        <div>{item.name}</div>
+        )
+        
+      })
+      }   
+      </div>
+     
+     
+    </>
+  );
+};
 
 export default Exercises;
