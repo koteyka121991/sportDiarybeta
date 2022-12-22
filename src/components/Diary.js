@@ -1,7 +1,6 @@
 import React from "react";
 import { AiFillPlusCircle } from "react-icons/ai";
 import Categories from "./Categories";
-import Preloader from "./preloader/Preloader";
 
 
 export default function Diary() {
@@ -15,11 +14,9 @@ export default function Diary() {
     setButtonOpen(true);
     setCategoryOpen(false)
   }
-
   return (
     <>
       <div>
-        
         {buttonOpen && (
           <div>
             <h1>Тренировка не найдена</h1>

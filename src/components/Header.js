@@ -1,10 +1,12 @@
 import React from 'react';
+import Search from './search/Search';
+
 
 const Header = () => {
     return (
         <div className='header'>
             <div>Упражнения</div>
-            <div>Поиск</div>
+            <Search />
         </div>
     );
 }
